@@ -1,0 +1,9 @@
+project: savantenvs/yasm
+target: fuzz_nasm
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_nasm/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_nasm
+    libfuzzer: true
+    dictionary: /mayhem/fuzz_nasm.dict
